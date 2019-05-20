@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+  <script type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+  <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/exporting.js"></script>
+  <script>
+    $(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'WinRate'
+        },
+        xAxis: {
+            categories: ['10 min', '20 min', '30 min', '40 min', '50 min', '60 min']
+        },
+        yAxis: {
+            title: {
+                text: 'WinRate (%)'
+            }
+        },
+        tooltip: {
+            enabled: false,
+            formatter: function() {
+                return '<b>'+ this.series.name +'</b>'+this.x +': '+ this.y +'%';
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: false
+            }
+        },
+        series: [{
+            name: 'WinRate',
+            data: [40, 69, 75, 35, 50, 68]
+        }]
+    });
+});
+  </script>
+</head>
+<body>
+  <div id="container" style="min-width:700px;height:400px"></div>
+</body>
+</html>

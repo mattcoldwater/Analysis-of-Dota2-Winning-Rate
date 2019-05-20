@@ -1,0 +1,12 @@
+SELECT
+match_id,
+duration,
+radiant_gold_adv,
+radiant_xp_adv
+FROM matches
+JOIN match_patch using(match_id)
+WHERE TRUE
+AND duration > 1800
+AND matches.start_time >= extract(epoch from timestamp '1998-12-25T00:00:00.000Z')
+ORDER BY matches.match_id NULLS LAST
+LIMIT 66600

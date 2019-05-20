@@ -1,0 +1,2 @@
+select match_id, ord, hero_id, team, is_pick as ban_or_pick
+from picks_bans

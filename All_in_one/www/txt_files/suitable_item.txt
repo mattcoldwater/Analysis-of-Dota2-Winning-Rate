@@ -1,0 +1,2 @@
+select H.id hero_id, I.id item_id
+from heroes H, items I

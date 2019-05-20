@@ -1,0 +1,3 @@
+select leagueid, tier
+from leagues
+order by leagueid

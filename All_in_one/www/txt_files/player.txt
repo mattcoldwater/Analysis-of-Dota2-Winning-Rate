@@ -1,0 +1,3 @@
+SELECT account_id, cheese
+FROM players
+where account_id in (SELECT account_id from player_matches)

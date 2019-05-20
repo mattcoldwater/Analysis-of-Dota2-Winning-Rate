@@ -1,0 +1,15 @@
+SELECT 
+PM.match_id pmatch_id,
+PM.match_seq_num,
+PM.game_mode,
+PM.lobby_type lobby_mode,
+PM.num_mmr,
+PM.avg_mmr,
+PM.start_time,
+PM.radiant_win pradiant_win,
+matches.match_id match_id
+FROM matches, public_matches PM
+WHERE TRUE
+AND matches.start_time >= extract(epoch from timestamp '1998-12-25T00:00:00.000Z')
+ORDER BY match_id NULLS LAST
+limit 10000

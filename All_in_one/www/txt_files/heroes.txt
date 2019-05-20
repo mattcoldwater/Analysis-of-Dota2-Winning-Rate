@@ -1,0 +1,3 @@
+select id as hero_id, name, localized_name, (attack_type = 'Ranged') as attack_type, primary_attr, legs
+from heroes
+order by id

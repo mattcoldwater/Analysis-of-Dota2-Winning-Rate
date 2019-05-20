@@ -1,0 +1,17 @@
+SELECT
+match_id,
+player_slot slot,
+account_id,
+hero_id,
+kills,
+deaths,
+hero_damage,
+tower_damage,
+hero_healing,
+gold_per_min,
+xp_per_min,
+level
+FROM player_matches
+WHERE TRUE
+AND match_id in (SELECT DISTINCT match_id FROM matches)
+AND account_id in (SELECT account_id FROM players where account_id in (SELECT account_id from player_matches))
