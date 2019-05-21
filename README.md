@@ -8,4 +8,7 @@ Our target users are mainly professional players. We will summarize the data of 
 
 Our team aim at building a database based on Dota2 heroes' data. It may include basic information about heroes like attributes, winning rate, picking rate, farming efﬁciency and average damage output, labels, etc. The system will provide some labels for users to select, and the system will recommend user the suitable heroes and respective hero tricks. Besides, the system can provide wining rate based on each team heroes’ selection.
 
-Members: Haoyu Wu (Me), Zheng Wang, XuanShuo Zhang, Ziyuan Chen
+
+Great thanks to to my teammates!
+
+Zheng Wang, XuanShuo Zhang, Ziyuan Chen
